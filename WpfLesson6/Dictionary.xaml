@@ -1,0 +1,6 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WpfLesson6" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <SolidColorBrush x:Key="MainColor"  >#00bfff</SolidColorBrush>
+    <sys:Double x:Key="MainHeight" >35</sys:Double>
+</ResourceDictionary>
