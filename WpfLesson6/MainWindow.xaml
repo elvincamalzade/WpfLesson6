@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfLesson6" xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Wpf Lesson" Height="450" Width="800">
     <!--<Window.Resources>
         <SolidColorBrush x:Key="PrimaryColor" >Green</SolidColorBrush>
         <sys:Double x:Key="ButtonFontSize" >30</sys:Double>
@@ -51,7 +51,8 @@
         </StackPanel>-->
 
         <!--<StackPanel>
-            --><!--<Slider Name="sld" Maximum="100" Minimum="20" ></Slider>
+            -->
+        <!--<Slider Name="sld" Maximum="100" Minimum="20" ></Slider>
             <TextBlock Padding="10" FontSize="{Binding ElementName=sld,Path=Value}" Text="Hello WPF" ></TextBlock>
 
 
@@ -75,7 +76,8 @@
             </Slider>
 
             <TextBox Text="Hello WPF" FontSize="{Binding ElementName=sld,Path=Value}" ></TextBox>
-            <TextBox FontSize="26" Text="{Binding ElementName=sld,Path=Value,StringFormat=N0}" ></TextBox>--><!--
+            <TextBox FontSize="26" Text="{Binding ElementName=sld,Path=Value,StringFormat=N0}" ></TextBox>-->
+        <!--
 
 
 
@@ -95,12 +97,13 @@
 
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="5*" />
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <ListBox MouseDoubleClick="listbox_MouseDoubleClick"  Name="listbox" ItemsSource="{Binding Cars}" >
-            
+
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal" >
@@ -116,6 +119,19 @@
         <Button FontSize="26" Grid.Row="1" Name="AddBtn" Click="AddBtn_Click" >
             Add
         </Button>
+
+        <!--<TextBlock Grid.Row="3" FontSize="26" Name="hakunaTextBlock"
+                   Foreground="Red"
+                   Background="{Binding RelativeSource={RelativeSource Self},Path=Foreground}"
+                   Text="{Binding RelativeSource={RelativeSource Self},Path=Name}"
+                   ></TextBlock>-->
+        <TextBlock Grid.Row="3" FontSize="26"
+                   Foreground="Red"
+
+                   Text="{Binding RelativeSource={RelativeSource
+FindAncestor, AncestorType={x:Type Window}},
+Path=Title}"
+                   ></TextBlock>
 
     </Grid>
 </Window>

@@ -113,7 +113,8 @@ namespace WpfLesson6
         private void listbox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             var info = new Info();
-            info.InfoCar=(sender as ListBox).SelectedItem as Car;
+            //info.InfoCar=(sender as ListBox).SelectedItem as Car;
+            info.Car=(sender as ListBox).SelectedItem as Car;
             info.ShowDialog();
         }
     }
